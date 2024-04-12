@@ -21,6 +21,8 @@ typedef enum {
     eGpioDriverPin_DebugRxPin,
     eGpioDriverPin_ModemUartRxPin,
     eGpioDriverPin_ModemUartTxPin,
+    eGpioDriverPin_GnssUartTxPin,
+    eGpioDriverPin_GnssUartRxPin,
     eGpioDriverPin_Last,
 } eGpioDriverPin_t;
 /**********************************************************************************************************************
