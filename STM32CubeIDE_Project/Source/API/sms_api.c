@@ -69,6 +69,7 @@ bool SMS_API_SendSms (const char *message_content) {
     if (Modem_API_Lock() == false) {
         return false;
     }
+    /* the recipient's number: a placeholder, set it before use */
     char *at_command_send_number = "AT+CMGS=\"00000000000\"\r\n";
     eModemStatusEnum_t status = MODEM_API_SendAndWaitRepeat(at_command_send_number, 10000, 3, 5000);
     if (status != eModemStatus_ReadyToSendMessage) {
